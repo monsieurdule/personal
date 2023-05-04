@@ -22,14 +22,14 @@ echo $SSHPASS | sudo -S tar -cvzf /var/www/hr/backend_test.tar.gz /var/www/hr/ba
 echo $SSHPASS | sudo -S rm /var/www/hr/frontend_test.tar.gz; \
 echo $SSHPASS | sudo -S tar -cvzf /var/www/hr/frontend_test.tar.gz /var/www/hr/frontend; \ 
 # Copy build to server and extract
-echo $SSHPASS | sudo -S cp /tmp/build.tar.gz /var/www/hr/frontend;" 
-# 'echo Qcerris2020! | sudo -S tar -xvzf /var/www/hr/frontend/build.tar.gz -C /var/www/hr/' \
+echo $SSHPASS | sudo -S cp /tmp/build.tar.gz /var/www/hr/frontend;
+echo $SSHPASS | sudo -S tar -xvzf /var/www/hr/frontend/build.tar.gz -C /var/www/hr/; \
 # Change settings.py
-# 'echo Qcerris2020! | sudo -S cp /var/www/hr/settings.py /var/www/hr/backend/performance_review/' \
+echo $SSHPASS | sudo -S cp /var/www/hr/settings.py /var/www/hr/backend/performance_review/; \
 # Make migrations
-# 'echo Qcerris2020! | sudo -S source venv/bin/activate'
-# cd /var/www/hr/backend
-# python3 manage.py makemigrations
+echo $SSHPASS | sudo -S source venv/bin/activate; \
+cd /var/www/hr/backend; \
+echo $SSHPASS | sudo -S python3 manage.py makemigrations; \
 # Restart services
-# 'echo Qcerris2020! | sudo -S service qcaas restart' \
-# 'echo Qcerris2020! | sudo -S service nginx restart' \
+echo $SSHPASS | sudo -S service qcaas restart; \
+echo $SSHPASS | sudo -S service nginx restart;" \
